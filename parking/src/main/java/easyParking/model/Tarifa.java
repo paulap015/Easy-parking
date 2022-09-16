@@ -1,4 +1,4 @@
-package model;
+package easyParking.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,13 +15,13 @@ import javax.persistence.Table;
 @Data
 @Builder
 @Entity
-@Table(name="rol")
-public class Rol {
+@Table(name="tarifa")
+public class Tarifa {
 
     @Id
-    @Column(name="idRol")
-    private Integer idRol;
+    @Column(name="idTarifa")
+    private Integer idTarifa;
 
-    @Column(name="nombreRol")
-    private String nombreRol;
+    @Column(name="precio")
+    private Double precio;
 }

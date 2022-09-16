@@ -1,4 +1,4 @@
-package model;
+package easyParking.model;
 
 import lombok.*;
 
