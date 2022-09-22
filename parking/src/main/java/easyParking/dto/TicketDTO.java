@@ -1,5 +1,6 @@
-package easyParking.model;
+package easyParking.dto;
 
+import easyParking.model.VehiculoZona;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,27 +9,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-@Entity
-@Table(name="ticket")
-public class Ticket {
+public class TicketDTO {
 
-    @Id
-    @GeneratedValue
-    @Column(name="idTicket")
     private Integer idTicket;
-
-    @Column(name="fecha")
     private Date fecha;
-
-    @Column(name="total")
     private Double total;
-
-    @OneToOne
-    @JoinColumn (name="parqueo")
-    private VehiculoZona parqueo;
-
+    private Integer parqueo;
 }

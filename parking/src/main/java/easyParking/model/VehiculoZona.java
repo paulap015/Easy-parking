@@ -17,6 +17,7 @@ import java.util.Date;
 public class VehiculoZona {
 
     @Id
+    @GeneratedValue
     @Column(name="id")
     private Integer id;
 

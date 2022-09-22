@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface VehiculoRepository extends JpaRepository<Vehiculo,String> {
@@ -17,4 +18,6 @@ public interface VehiculoRepository extends JpaRepository<Vehiculo,String> {
 
     //@Query
     public List<Vehiculo> findAll();
+
+    public Optional<Vehiculo> findByPlaca(String placa);
 }

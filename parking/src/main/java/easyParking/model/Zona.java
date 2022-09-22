@@ -17,7 +17,7 @@ public class Zona {
 
     @Id
     @Column(name="idZona")
-    private String idZona;
+    private Integer idZona;
 
     @Column(name="nombreZona")
     private String nombreZona;
